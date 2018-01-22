@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity_name: MyString
+  : MyString
+  activity_date: MyString
+  : 2018-01-20
+  activity_duration: MyString
+  : MyString
+
+two:
+  activity_name: MyString
+  : MyString
+  activity_date: MyString
+  : 2018-01-20
+  activity_duration: MyString
+  : MyString
