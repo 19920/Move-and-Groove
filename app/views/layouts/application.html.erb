@@ -7,30 +7,53 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-   
-  <nav class="navbar navbar-static navbarfixed-top">
-		<a class="navbar-brand">Move and Groove </a>
-		<div class="navbar-collapse collapse">
-			<%= image_tag("logo/log.jpg",width:'80px') %>
+ <body class="bg-warning text-dark" > 
+	  <nav class="navbar navbar-static navbarfixed-top">
+			<a class="navbar-brand">Move and Groove </a>
+			<div class="navbar-collapse collapse">
+				<%= image_tag("logo/log.jpg",width:'80px') %>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to 'Sign up',new_user_registration_path %></li>
+	  		        <li><%= link_to 'Sign in',new_user_session_path %></li>
+	  		        <% if signed_in? %>
+	  		          <li><%= link_to 'Home',address_Home_path %></li>
+				      <li><%= link_to 'About us',address_About_path %></li>
+				      <li><%= link_to 'Contact us',address_Contact_path %></li>
+				       <li><%= link_to "activities", activities_path %></li>
+	                   <li><%= link_to 'Logout',destroy_user_session_path,method: :delete %></li>
+	                <% end %>
+				</ul>	
+	  </nav>
+	  <hr>
+	  
+		<p class="notice"><%= notice %></p>
+	    <p class="alert"><%= alert %></p>
+		<div class="container">
+		  <div class="page-header">
+		  	<h1 id="title"> Söderhamn Move and Groove  info system</h1>
+		  </div>
+		  <div id= "content">
+		      <%= yield %>
+		   </div>
+		   <div id="sidebar">
+		  	</div>
+
+
+<hr>
+	<div class="navbar navbar-default navbarfixed-bottom">
+		<div class="container-fluid">
 			<ul class="nav navbar-nav navbar-right">
-				<li><%= link_to 'Sign up',new_user_registration_path %></li>
-  		        <li><%= link_to 'Sign in',new_user_session_path %></li>
-  		        <li><%= link_to 'Logout',destroy_user_session_path,method: :delete %></li>
+	  		        <% if signed_in? %>
+	  		          <li><%= link_to 'Home',address_Home_path %></li>
+				      <li><%= link_to 'About us',address_About_path %></li>
+				      <li><%= link_to 'Contact us',address_Contact_path %></li>
+				      <li><%= link_to "activities", activities_path %></li>
+	                  <li><%= link_to 'Logout',destroy_user_session_path,method: :delete %></li>
+	                <% end %>
 			</ul>	
-  </nav>
-  <hr>
-  <body class= "jumbotron" id="Welcome">
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-	<div class="container">
-	  <div class="page-header">
-	  	<h1 id="title">Move and Groove  info system</h1>
-	  </div>
-	  <div id= "content">
-	      <%= yield %>
-	   </div>
-	   <div id="sidebar">
-	  	</div>
+				
+		</div>
+	</div>
   </body>
   
  

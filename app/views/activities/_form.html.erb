@@ -11,22 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :activity_name %>
-    <%= form.text_field :activity_name, id: :activity_activity_name %>
+  
+  
+
+  <div class="control-group">
+    <%= form.label :activity_name ,class: 'control-label'%>
+    <div class="controls">
+     <%= form.select(:activity_name, options_for_select([['running','running'],['walking','walking'],['skating','skating'],['skiing','skiing'],['downhill skiing','downhill skiing'],['mountain bike','mountain bike'],['cyckling','cyckling'],['swimming','swimming'],['hiking','hiking'],['rowing','rowing']])) %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :activity_date %>
-    <%= form.text_field :activity_date, id: :activity_activity_date %>
+  <div class="control-group">
+    <%= form.label :activity_date,class: 'control-label' %>
+    <div class="controls">
+      <%= form.date_select :activity_date, id: :activity_date, class: "form-control datepicker" %>
+    </div>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :activity_duration %>
-    <%= form.text_field :activity_duration, id: :activity_activity_duration %>
+    <div class="controls">
+     <%= form.text_field :activity_duration, id: :activity_activity_duration, placeholder: '20min' %>
+   </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="control-group">
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
+
