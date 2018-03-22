@@ -4,6 +4,7 @@
 .navbar{
 	font-size:20px;
 	color:red;
+	background-color:red;
 
 }
 .navbar-brand{
@@ -25,8 +26,28 @@ h3{
 }
 navbarfixed-bottom{
 	margin-top:20px;
+	
+
 }
 .navbar-collapse{
     color:rgb(0,0,0);
 }
+.bg-dark{
+ background-color:rgba(0,0,0,0.75);
+ position: fixed;
+ width: 100%;
+ height: 30%;
+ top:25%;
+ right:0;
+ left:0;
+ bottom:0;
+ z-index:-98;
+ }
+ .row-padding{
+ display:none;
+ }
+ .footer{
+ background-color:red;
+
+ } 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<div class="jumbotron">
   <head>
     <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
@@ -8,15 +9,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head> 
 <body>
-  <div style="position: fixed; z-index: -99; width: 100%; height: 100%; top: 70; right: 0; bottom: 0; left: 0; overflow: hidden; ">
+
+   <div style="position: fixed; z-index: -99; width: 100%; height: 100%; top: 70; right: 0; bottom: 0; left: 0; overflow: hidden; ">
         <iframe frameborder="0" height="100%" width="100%"
             src="https://youtube.com/embed/gF0rrpMH-Jo?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1&loop=1">
         </iframe>
-    </div>
+    
+  </div>
+  <div  class="bg-dark">
+  </div>
+<div >
 <h4>Connecting to the World's Athletes</h4>
 <h3>Do you want to choose training activity and record your improvments? welcome to <strong>Move and Groove</strong> ,we are here to assist you!</h3>
-
+</div>
 </body>
+</div>
 </html>
 
 

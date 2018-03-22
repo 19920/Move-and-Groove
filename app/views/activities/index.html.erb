@@ -1,11 +1,11 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>  
 
 <div class="container">
-  <p><strong>we have now <%=@activities.length %> Activities records :</strong>
-  <button type="button" class="btn btn-info" data-toggle ="collapse" href ="#demo">View All</button>
-  </p>
-  <div id="demo" class="collapse">
-    <table class="table table-bordered table-hover table-condensed">
+      <p><strong>we have now <%=@activities.length %> Activities records :</strong>
+      <button id = "myFunction" class="btn btn-info">view all</button>
+      </p>
+  <div class ="row-padding" id="demo">
+  <table class="table table-bordered table-hover table-condensed ">
       <thead>
         <tr>
           
@@ -40,9 +40,11 @@
         <% end %>
       </tbody>
     </table>
-    </div>
-    </div>
-<table class="table table-bordered table-hover table-condensed">
+  </div>
+
+
+<div class="row" id="Show">
+<table class="table table-bordered table-hover table-condensed ">
   <thead>
     <tr>
       
@@ -78,6 +80,24 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+<script>
+ document.getElementById("myFunction").onclick= function(){
+    var x = document.getElementById("demo");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      document.getElementById("myFunction").innerHTML ="view only yours";
+    }
+    else{
+      x.style.display = "none"
+      document.getElementById("myFunction").innerHTML ="view all";
+    }
+  };
+   
+  
+</script>
+
 
 <br>
 
